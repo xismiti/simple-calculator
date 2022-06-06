@@ -20,7 +20,7 @@
                     <td><button class="button" onclick="clean()">C</button></td>
                     <td><button class="button" onclick="back()" style="background-color: rgba(255, 0, 0, 0.623);"><</button></td>
                     <td><button class="button" onclick="insert('/')">/</button></td>
-                    <td><button class="button" onclick="insert('x')">X</button></td>
+                    <td><button class="button" onclick="insert('*')">x</button></td>
                 </tr>
                 <tr>
                     <td><button class="button" onclick="insert('7')">7</button></td>
@@ -49,50 +49,17 @@
 
         </div>
         <section class="button-theme">
-            <div class="btn">
+            <div class="btn" onclick="theme()">
                 
             </div>
         </section>
 
-        <div class="rodape"><p>Developed by <a href="https://github.com/xismiti" target="_blank">Guilherme Maciel Schmidt</a></p></div>
+        <div class="rodape"><p>D<button class="this-is-a-normal-code" onclick="easteregg()">e</button>veloped by <a href="https://github.com/xismiti" target="_blank">Guilherme Maciel Schmidt</a></p></div>
+
+            <div class="gif"><img src="img/this-is-a-normal-gif.gif" alt="" srcset="" class="a-normal-gif"></div>
     </div>
 
-    <script>
-        function insert(num){
-
-            var number = document.getElementById('display').innerHTML
-            if (display){
-                document.getElementById('display').innerHTML = number + num
-            }
-        }
-        function clean(){
-            document.getElementById("display").innerHTML = ''
-        }
-        function back(){
-            var result = document.getElementById("display").innerHTML
-            document.getElementById("display").innerHTML = result.substring(0, result.length - 1 )
-        }
-        
-        function rest(){
-            var result = document.getElementById("display").innerHTML;
-
-            if(result){
-                document.getElementById('display').innerHTML = eval(result)
-            }
-
-        }
-
-        const btn = document.querySelector('div.btn')
-        const container = document.querySelector("div.container")
-
-
-        btn.onclick = function(){
-            this.classList.toggle('active')
-            container.classList.toggle('active')
-
-
-        }
-    </script>
+    <script src="index.js"></script>
 
 </body>
 </html>
